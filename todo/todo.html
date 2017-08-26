@@ -1,9 +1,22 @@
 <!DOCTYPE html> 
   <html lang="en-US"> 
     <meta charset="utf-8"
-      <link rel="stylsheet" href="./todo.css"
+      <link rel="stylesheet" href="todo.css">
     <head> 
       <title> Todo </title> 
+
+<style>
+
+  li{
+  list-style: none;
+  background-color: lightgray;
+  border-radius:4px; 
+  width:500px;
+  margin-top:2px ;
+  padding-left:10px;
+  border:1px solid black;
+}
+</style>
    </head>
     <body> 
      <div class="page-wrapper">
@@ -12,20 +25,23 @@
           <h1>  TODO List </h1> 
         </div><!-- header --> 
       </header> 
-        <section class="outer-list-section">
-          <article class="list-article">
-          </article>
-        </section>
-        <section class="form-section">
+           <section class="form-section">
           <article class="form"> 
-            <form method="post"> 
-              <label for="Add"> Add to list </label> <br /> 
-               <input type="text" name="entry" id="entry" placeholder="add something new here" required> <br /> 
-              <button type="submit" id="submit" value="Submit"> Submit </button> <br /> 
+              <label for="Add"> Add to list </label> <br />
+               <input type="text" name="entry" class="entry" placeholder="add something new here">
+              <button class="addBtn"> Submit </button> <br /> 
             </form>
           </article> <!-- form article --> 
         </section>
+        <section class="outer-list-section">
+          <article class="list-article">
+           <ul class="todoList"> 
+           </ul>
+          </article>
+        </section>
+     
       </div> <!-- page wrapper div --> 
+      <script src="todo.js"></script>
     </body>
   </html>
 
