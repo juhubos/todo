@@ -12,7 +12,7 @@ button.addEventListener('click', function () {
   addNewItem(document.querySelector('.todoList'), text)
 })
 
-document.querySelector("#entry").addEventListener('keypress', function(event) {
+entry.addEventListener('keypress', function(event) {
 	var key = event.which || event.keyCode;
     if (key === 13) { 
 		var todo = this.value;
@@ -20,13 +20,25 @@ document.querySelector("#entry").addEventListener('keypress', function(event) {
 	 }
 });
 
+// onclick='parentNode.parentNode.removeChild(parentNode)      ..works as well'
 function addNewItem (list, text) {
   console.log('this is working')
   var listItem = document.createElement('li')
-  listItem.innerHTML = text
+  listItem.innerHTML = "<button onclick='delTodo(this)'</button>" + " " + text;
   list.appendChild(listItem)
   entry.select()
 }
+
+// 'this' is passed in from HTML and refers to the button. Select it's parentNode (li), and li's 
+// parentNode (ul). Remove the buttons parentNode(li) ...that is a child to the ul
+function delTodo(buttonNode) {
+	buttonNode.parentNode.parentNode.removeChild(buttonNode.parentNode);
+}
+
+
+
+
+
 
  // this is what output should look like
  // <li> <input type="checkbox"> new item here </li>
