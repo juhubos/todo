@@ -24,7 +24,7 @@ entry.addEventListener('keypress', function(event) {
 function addNewItem (list, text) {
   console.log('this is working')
   var listItem = document.createElement('li')
-  listItem.innerHTML = "<button onclick='delTodo(this)'</button>" + " " + text;
+  listItem.innerHTML = "<button onclick='delTodo(this)' id='del'>X</button>" + " " + text;
   list.appendChild(listItem)
   entry.select()
 }
@@ -34,18 +34,4 @@ function addNewItem (list, text) {
 function delTodo(buttonNode) {
 	buttonNode.parentNode.parentNode.removeChild(buttonNode.parentNode);
 }
-
-
-
-
-
-
- // this is what output should look like
- // <li> <input type="checkbox"> new item here </li>
-
-
-
-
-
-
 

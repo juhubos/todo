@@ -1,46 +1,19 @@
 <!DOCTYPE html> 
   <html lang="en-US"> 
-    <meta charset="utf-8"
+    <meta charset="UTF-8">
       <link rel="stylesheet" href="todo.css">
     <head> 
       <title> Todo </title> 
-
-<style>
-
-  li{
-  list-style: none;
-  background-color: lightgray;
-  border-radius:4px; 
-  width:500px;
-  margin-top:2px ;
-  padding-left:10px;
-  border:1px solid black;
-}
-</style>
    </head>
     <body> 
-     <div class="page-wrapper">
-      <header>
-        <div class="header"> 
-          <h1>  TODO List </h1> 
-        </div><!-- header --> 
-      </header> 
-           <section class="form-section">
-          <article class="form"> 
-              <label for="Add"> Add to list </label> <br />
-               <input type="text" id="entry" class="entry" placeholder="add something new here">
-              <button class="addBtn"> Submit </button> <br /> 
-            </form>
-          </article> <!-- form article --> 
-        </section>
-        <section class="outer-list-section">
-          <article class="list-article">
-           <ul class="todoList"> 
-           </ul>
-          </article>
-        </section>
-     
-      </div> <!-- page wrapper div --> 
+       <div class="container"> 
+          <h1>TODO List</h1>
+          <div class="input">
+            <input type="text"  class="entry" placeholder="add a todo">
+            <button class="addBtn"> Submit </button> 
+          </div>
+          <ul class="todoList"></ul>
+        </div> <!-- page wrapper div --> 
       <script src="todo.js"></script>
     </body>
   </html>
